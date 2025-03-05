@@ -13,6 +13,13 @@ interface Project {
 }
 
 async function main() {
+  // Check for help flag first
+  const args = process.argv.slice(2);
+  if (args.includes('--help') || args.includes('-h')) {
+    printUsage();
+    process.exit(0); // Exit with success code
+  }
+
   // Get GitLab API token from environment variable
   const gitlabToken = process.env.GITLAB_TOKEN;
   if (!gitlabToken) {
@@ -31,7 +38,6 @@ async function main() {
   const gitlabApiUrl = `${gitlabBaseUrl}/api/v4`;
 
   // Parse command line arguments
-  const args = process.argv.slice(2);
   if (args.length === 0) {
     printUsage();
     process.exit(1);
