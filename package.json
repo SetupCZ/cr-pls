@@ -1,0 +1,16 @@
+{
+  "name": "cr-pls",
+  "description": "Asking for a code review has never been easier",
+  "version": "1.0.0",
+  "module": "index.ts",
+  "type": "module",
+  "bin": {
+    "cr-pls": "./index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
