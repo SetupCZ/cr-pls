@@ -1,5 +1,5 @@
 # cr-pls
-The tool generates formatted output for code review requests:
+The tool generates markdown formatted output for code review requests:
 ```
 :pray: [project-name] [merge-request-title](merge-request-url)
 ```
